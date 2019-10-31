@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #888;
+  font-size: 2.6rem;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.story {
+  display: flex;
+  align-items: center;
+  padding: 3rem 6rem;
+
+  &__pic {
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    height: 22rem;
+    width: 22rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+img {
+  transform: translateX(-3rem);
+}
+
+.btn {
+  padding: 2rem 4rem;
+
+  &--increment {
+    background-color: rgba(0, 255, 128, 0.692);
+
+    &:hover {
+      background-color: rgba(0, 255, 128, 0.349);
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: springgreen;
+    }
+  }
+}

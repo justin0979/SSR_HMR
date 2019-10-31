@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  background-color: #888;
+  font-size: 2.6rem; }
+
+.app {
+  height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center; }
+
+.story {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 3rem 6rem; }
+  .story__pic {
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+    height: 22rem;
+    width: 22rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center; }
+
+img {
+  -webkit-transform: translateX(-3rem);
+          transform: translateX(-3rem); }
+
+.btn {
+  padding: 2rem 4rem; }
+  .btn--increment {
+    background-color: rgba(0, 255, 128, 0.692); }
+    .btn--increment:hover {
+      background-color: rgba(0, 255, 128, 0.349);
+      cursor: pointer; }
+    .btn--increment:active {
+      background-color: springgreen; }
+
