@@ -12,8 +12,8 @@
     "dev:server": "nodemon --watch webpack --watch dist dist/server-bundle.js",
     "dev:build-client": "webpack --config webpack/webpack.dev-client.js --watch",
     "dev:build-server": "webpack --config webpack/webpack.dev-server.js --watch",
-    "clean": "rm -rf dist public",
-    "dev:client": "webpack-dev-server --config webpack/webpack.config.js"
+    "dev:wds-client": "webpack-dev-server --config webpack/webpack.wds-config.js",
+    "clean": "rm -rf dist public"
   },
   "keywords": [],
   "author": "",
