@@ -9,7 +9,6 @@
     "build:client": "webpack --config webpack/webpack.dev-client.js",
     "build:server": "webpack --config webpack/webpack.dev-server.js",
     "dev": "npm run build:server && node dist/server-bundle.js",
-    "dev:wds-client": "webpack-dev-server --config webpack/webpack.wds-config.js",
     "clean": "rm -rf dist public"
   },
   "keywords": [],
@@ -57,7 +56,6 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-dev-server": "^3.9.0",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
