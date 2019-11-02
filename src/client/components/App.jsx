@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import cabin2 from 'images/cabin-2';
+import { Link } from 'react-router-dom';
+import field1 from 'images/field-1';
 import { increment, decrement } from 'actions';
 
 class App extends React.Component {
@@ -11,20 +12,23 @@ class App extends React.Component {
       <div className="app">
         <div className="story">
           <figure className="story__pic">
-            <img src={cabin2} alt="cabin2" />
+            <img src={field1} alt="field1" />
           </figure>
           <div className="story__text">
-            <h1>Cabin 2</h1>
+            <h1>Field Pic</h1>
             <p>
-              Caleb enjoyed visiting Cabin 2 for the second year in a row.
-              During his stays, he was lucky enough to have been visited by
-              different types of animals. His favorite (at least I think), were
-              probably the kittens.
+              I made sure that the hot module replacement code had been properly
+              used. So far, everything is updating as expected. Now, I am going
+              to take some time to finish some CSS courses and continue to check
+              out how to have HMR implemented so that mini-css-extract-plugin
+              can be used; that way, when I turn off javascript on the browser,
+              all CSS is still applied.
             </p>
-            <p>I'd like this to work</p>
-            <p>Failed when saving this file</p>
           </div>
         </div>
+        <Link className="link" to={'/users'}>
+          Check out the users page
+        </Link>
         <div className="count">
           <div className="buttons">
             <button
@@ -40,7 +44,7 @@ class App extends React.Component {
               decrement
             </button>
           </div>
-          <h1>{this.props.count}</h1>
+          <h1 className="count__value">{this.props.count}</h1>
         </div>
       </div>
     );

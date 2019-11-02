@@ -10,20 +10,13 @@ import createStore from 'helpers/createStore';
 
 const app = express();
 const compiler = webpack(config);
-const isDev = process.env.NODE_ENV === 'development';
 
-if (isDev) {
-  app.use(webpackDevMiddleware(compiler, config.devServer));
-  app.use(webpackHotMiddleware(compiler));
-} else {
-  console.log(`
-  
-  
-    THIS IS FOR process.env.NODE_ENV === 'production'
-  
-  
-  `);
-}
+app.use(
+  webpackDevMiddleware(compiler, {
+    publicPath: config.output.publicPath
+  })
+);
+app.use(webpackHotMiddleware(compiler));
 
 app.use(express.static('public'));
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchUsers } from 'actions';
 
 class UsersList extends React.Component {
@@ -18,6 +19,9 @@ class UsersList extends React.Component {
       <div>
         <h1>Big List of Users:</h1>
         <ul>{this.renderList()}</ul>
+        <Link className="link" to={'/'}>
+          Really, Really boring still, but go back home
+        </Link>
       </div>
     );
   }

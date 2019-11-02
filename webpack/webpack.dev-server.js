@@ -6,10 +6,19 @@ const nodeExternals = require('webpack-node-externals');
 module.exports = merge(baseConfig, {
   name: 'server',
   target: 'node',
+  mode: 'production',
   entry: './src/server/server.js',
   output: {
     filename: 'server-bundle.js',
     path: path.resolve(__dirname, '../dist')
   },
-  externals: nodeExternals()
+  externals: nodeExternals(),
+  module: {
+    rules: [
+      {
+        test: /\.s?css$/,
+        use: 'ignore-loader'
+      }
+    ]
+  }
 });
