@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchUsers } from 'actions';
 
-class UsersList extends React.Component {
+class UsersListPage extends React.Component {
   componentDidMount() {
     this.props.fetchUsers();
   }
@@ -40,5 +40,5 @@ export default {
   component: connect(
     mapStateToProps,
     { fetchUsers }
-  )(UsersList)
+  )(UsersListPage)
 };

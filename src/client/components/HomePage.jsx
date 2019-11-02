@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import field1 from 'images/field-1';
 import { increment, decrement } from 'actions';
 
-class App extends React.Component {
+class HomePage extends React.Component {
   render() {
     const { count } = this.props;
 
@@ -62,5 +62,5 @@ export default {
   component: connect(
     mapStateToProps,
     { increment, decrement }
-  )(App)
+  )(HomePage)
 };
