@@ -7,7 +7,7 @@ module.exports = merge(baseConfig, {
   name: 'server',
   target: 'node',
   mode: 'production',
-  entry: './src/server/server.js',
+  entry: './server',
   output: {
     filename: 'server-bundle.js',
     path: path.resolve(__dirname, '../dist')

@@ -22,8 +22,8 @@
           "images": "./src/client/images",
           "reducers": "./src/client/reducers",
           "sass": "./src/client/sass",
-          "server": "./src/server",
-          "helpers": "./src/server/helpers"
+          "server": "./server",
+          "helpers": "./server/helpers"
         }
       }
     ]
