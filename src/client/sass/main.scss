@@ -12,12 +12,15 @@ html {
 }
 
 body {
-  background-color: #888;
+  background-color: #bbb;
   font-size: 2.6rem;
 }
 
 .app {
-  height: 100vh;
+  height: 93vh;
+  width: 90vw;
+  margin: 2vh auto;
+  background-color: #777;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,22 +28,40 @@ body {
 }
 
 .story {
-  display: flex;
-  align-items: center;
   padding: 3rem 6rem;
 
-  &__pic {
+  &__pic,
+  &__pic2 {
+    height: 34rem;
+    width: 34rem;
+    float: right;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    height: 22rem;
-    width: 22rem;
+
+    // center img inside figure
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 84em) {
+      height: 28rem;
+      width: 28rem;
+    }
+
+    @media only screen and (max-width: 75em) {
+      height: 24rem;
+      width: 24rem;
+    }
+  }
+
+  &__pic2 {
+    float: left;
+    transform: translateX(-1rem);
   }
 
   &__text {
     color: white;
+    padding-left: 6rem;
   }
 }
 
@@ -62,6 +83,7 @@ img {
 .btn {
   padding: 2rem 4rem;
   border-radius: 0.3rem;
+  outline: none;
   margin: 0.4rem;
   border: none;
   box-shadow: 1rem 2rem 5rem rgba(0, 0, 0, 0.5);
@@ -70,13 +92,16 @@ img {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
+  transition: all 0.1s;
 
   &:hover {
     box-shadow: 0.8rem 1.8rem 3rem rgba(0, 0, 0, 0.8);
+    transform: scale(1.02);
   }
 
   &:active {
     box-shadow: 0rem 0.1rem 1rem rgba(0, 0, 0, 0.8);
+    transform: scale(0.98);
   }
 
   &--increment {

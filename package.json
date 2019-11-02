@@ -13,7 +13,7 @@
     "clean": "rm -rf dist public"
   },
   "keywords": [],
-  "author": "",
+  "author": "Justin Mangawang",
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.6.3",

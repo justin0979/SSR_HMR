@@ -14,6 +14,9 @@ class App extends React.Component {
           <figure className="story__pic">
             <img src={field1} alt="field1" />
           </figure>
+          <figure className="story__pic2">
+            <img src={field1} alt="field1" />
+          </figure>
           <div className="story__text">
             <h1>Field Pic</h1>
             <p>
