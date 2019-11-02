@@ -20,6 +20,11 @@ module.exports = merge(baseConfig, {
     path: path.resolve(__dirname, '../public'),
     publicPath: '/'
   },
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
+  },
   module: {
     rules: [
       {
