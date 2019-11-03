@@ -27,6 +27,10 @@ class HomePage extends React.Component {
               can be used; that way, when I turn off javascript on the browser,
               all CSS is still applied.
             </p>
+            <p className="update">
+              UPDATE: external css files now work; nodemon use still being
+              worked on
+            </p>
           </div>
         </div>
         <Link className="link" to={'/users'}>
