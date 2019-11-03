@@ -28,8 +28,8 @@ class HomePage extends React.Component {
               all CSS is still applied.
             </p>
             <p className="update">
-              UPDATE: external css files now work; nodemon use still being
-              worked on
+              UPDATE: external css files now work and JSX updates are being
+              applied with and without JS applied to browser
             </p>
           </div>
         </div>
