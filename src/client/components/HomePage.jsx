@@ -31,6 +31,16 @@ class HomePage extends React.Component {
               UPDATE: external css files now work and JSX updates are being
               applied with and without JS applied to browser
             </p>
+            <div className="update">
+              UPDATE TO ABOVE UPDATE: Well, JSX and CSS saves only activate
+              browser refreshes when JS is allowed in browser. Not sure what I
+              did differently within a span of two hours, but now, when JS is
+              blocked on browser, changes do not show and browser doesn't
+              refresh (have to stop and npm start to see changes). At least with
+              JS allowed in browser, saves auto refresh and are applied to
+              browser. With JS blocked, initial CSS and JSX are still applied.
+              Good enough for development...for now.
+            </div>
           </div>
         </div>
         <Link className="link" to={'/users'}>
