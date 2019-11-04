@@ -27,20 +27,25 @@ class HomePage extends React.Component {
               can be used; that way, when I turn off javascript on the browser,
               all CSS is still applied.
             </p>
-            <p className="update">
-              UPDATE: external css files now work and JSX updates are being
-              applied with and without JS applied to browser
-            </p>
             <div className="update">
-              UPDATE TO ABOVE UPDATE: Well, JSX and CSS saves only activate
-              browser refreshes when JS is allowed in browser. Not sure what I
-              did differently within a span of two hours, but now, when JS is
-              blocked on browser, changes do not show and browser doesn't
-              refresh (have to stop and npm start to see changes). At least with
-              JS allowed in browser, saves auto refresh and are applied to
-              browser. With JS blocked, initial CSS and JSX are still applied.
-              Good enough for development...for now.
+              UPDATE : Well, JSX and CSS saves only activate browser refreshes
+              when JS is allowed in browser. Not sure what I did differently
+              within a span of two hours, but now, when JS is blocked on
+              browser, changes do not show and browser doesn't refresh (have to
+              stop and npm start to see changes). At least with JS allowed in
+              browser, saves auto refresh and are applied to browser. With JS
+              blocked, initial CSS and JSX are still applied. Good enough for
+              development...for now.
             </div>
+            <p className="update">
+              And again, several hours later, with JS blocked on browser, CSS
+              changes will be applied with manual browser refresh; however, JSX
+              changes still need server to be stopped and then restarted. Not
+              sure what is going on. Maybe it's my computer or maybe I dreamed
+              that browser was auto-refreshing on CSS and JSX saves when JS is
+              blocked on browser. I'm just happy that with JS allowed, all saves
+              to client side have hot reloading as expected.
+            </p>
           </div>
         </div>
         <Link className="link" to={'/users'}>
