@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "useBuiltIns": "entry",
+        "corejs": { "version": 3, "proposal": true }
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "@babel/transform-runtime",
+    "@babel/proposal-class-properties",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "src": "./src",
+          "client": "./src/client",
+          "actions": "./src/client/actions",
+          "components": "./src/client/components",
+          "reducers": "./src/client/reducers",
+          "sass": "./src/client/sass",
+          "server": "./src/server",
+          "helpers": "./src/server/helpers"
+        }
+      }
+    ]
+  ]
+}
