@@ -17,6 +17,7 @@
       "module-resolver",
       {
         "alias": {
+          "config": "./config",
           "src": "./src",
           "client": "./src/client",
           "actions": "./src/client/actions",
