@@ -17,6 +17,7 @@ class UsersList extends React.Component {
         <Link to={'/'}>Go Home</Link>
         <h1>Users:</h1>
         <ul>{this.renderUsers()}</ul>
+        <h1>{this.props.count}</h1>
       </div>
     );
   }
@@ -26,7 +27,8 @@ const loadData = store => store.dispatch(fetchUsers());
 
 const mapStateToProps = state => {
   return {
-    users: state.users
+    users: state.users,
+    count: state.count
   };
 };
 

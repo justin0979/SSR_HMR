@@ -1,5 +1,5 @@
-import Home from 'components/Home';
-import UsersList from 'components/UsersList';
+import Home from 'pages/Home';
+import UsersList from 'pages/UsersList';
 
 export default [
   {

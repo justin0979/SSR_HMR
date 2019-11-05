@@ -7,7 +7,8 @@
     "start": "npm run clean && npm run dev",
     "build:dev-server": "webpack --config config/webpack.dev-server.js",
     "dev": "npm run build:dev-server && node dist/server-bundle.js",
-    "clean": "rm -rf dist public"
+    "clean": "rm -rf dist public",
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
@@ -40,6 +41,7 @@
     "file-loader": "^4.2.0",
     "ignore-loader": "^0.1.2",
     "image-webpack-loader": "^6.0.0",
+    "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",

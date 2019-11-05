@@ -22,6 +22,7 @@
           "client": "./src/client",
           "actions": "./src/client/actions",
           "components": "./src/client/components",
+          "pages": "./src/client/pages",
           "reducers": "./src/client/reducers",
           "sass": "./src/client/sass",
           "server": "./src/server",
