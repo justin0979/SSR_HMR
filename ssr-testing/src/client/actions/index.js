@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USERS, INCREMENT, DECREMENT } from 'actions/types';
+import { FETCH_USERS, INCREMENT, DECREMENT } from '#actions/types';
 
 export const fetchUsers = () => async dispatch => {
   const res = await axios('http://react-ssr-api.herokuapp.com/users');

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { increment, decrement } from 'actions';
+import { increment, decrement } from '#actions';
 
 class Home extends React.Component {
   render() {

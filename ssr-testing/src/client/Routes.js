@@ -1,5 +1,5 @@
-import Home from 'pages/Home';
-import UsersList from 'pages/UsersList';
+import Home from '#pages/Home';
+import UsersList from '#pages/UsersList';
 
 export default [
   {

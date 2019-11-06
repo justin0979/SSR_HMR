@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchUsers } from 'actions';
+import { fetchUsers } from '#actions';
 
 class UsersList extends React.Component {
   componentDidMount() {
