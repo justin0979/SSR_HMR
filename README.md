@@ -15,6 +15,15 @@ I've only tried this in Chrome.
 Runs app in development mode.
 App runs on port 3000.
 
+### Tests
+
+Go to `testing` branch.
+
+`npm run test` will run and watch all current tests.
+
+`enzyme` and `enzyme-adapter-react-16` are used with `jest`.
+All tests are from Stephen Grider's "Advanced React and Redux: 2018 Edition" course.
+
 ### Current Issue
 
 Oddly, hours prior to JSX not updating with JS blocked in the browser,
