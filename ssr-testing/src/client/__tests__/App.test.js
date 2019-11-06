@@ -3,11 +3,20 @@ import { shallow } from 'enzyme';
 import '#src/setupTests';
 import App from '#client/App';
 import CommentBox from '#components/CommentBox';
+import CommentList from '#components/CommentList';
 
 describe('App component', () => {
-  it('shows a comment box', () => {
-    const wrapped = shallow(<App />);
+  let wrapper;
 
-    expect(wrapped.find(CommentBox).length).toEqual(1);
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+
+  it('shows a comment box', () => {
+    expect(wrapper.find(CommentBox).length).toEqual(1);
+  });
+
+  it('shows a comment list', () => {
+    expect(wrapper.find(CommentList).length).toEqual(1);
   });
 });

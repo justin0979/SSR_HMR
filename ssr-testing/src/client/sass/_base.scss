@@ -37,3 +37,13 @@ button {
   padding: 1rem;
   text-transform: uppercase;
 }
+
+.comment {
+  padding: 1rem;
+  text-transform: uppercase;
+  border: 1px solid #bbb;
+
+  &__num {
+    border-bottom: 1px solid #bbb;
+  }
+}
