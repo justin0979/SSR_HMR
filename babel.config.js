@@ -14,16 +14,16 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          '#config': './config',
-          src: './src',
-          client: './src/client',
-          actions: './src/client/actions',
-          components: './src/client/components',
-          images: './src/client/images',
-          reducers: './src/client/reducers',
-          sass: './src/client/sass',
-          server: './server',
-          helpers: './server/helpers'
+          '@config': './config',
+          '@src': './src',
+          '@client': './src/client',
+          '@actions': './src/client/actions',
+          '@components': './src/client/components',
+          '@images': './src/client/images',
+          '@reducers': './src/client/reducers',
+          '@sass': './src/client/sass',
+          '@server': './server',
+          '@helpers': './server/helpers'
         }
       }
     ]

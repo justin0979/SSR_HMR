@@ -3,10 +3,10 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpack from 'webpack';
 import { matchRoutes } from 'react-router-config';
-import Routes from 'client/Routes';
-import renderer from 'helpers/renderer';
-import config from '#config/webpack.dev-client';
-import createStore from 'helpers/createStore';
+import Routes from '@client/Routes';
+import renderer from '@helpers/renderer';
+import config from '@config/webpack.dev-client';
+import createStore from '@helpers/createStore';
 
 const app = express();
 const compiler = webpack(config);

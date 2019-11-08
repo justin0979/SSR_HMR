@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchUsers } from 'actions';
+import { fetchUsers } from '@actions';
 
 class UsersListPage extends React.Component {
   componentDidMount() {
@@ -22,6 +22,7 @@ class UsersListPage extends React.Component {
         <Link className="link" to={'/'}>
           Really, Really boring still, but go back home
         </Link>
+        <h1>Well, here's the count from the other page: {this.props.count}</h1>
       </div>
     );
   }
@@ -32,7 +33,8 @@ const loadData = store => {
 };
 
 const mapStateToProps = state => ({
-  users: state.users
+  users: state.users,
+  count: state.count
 });
 
 export default {
