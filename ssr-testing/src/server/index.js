@@ -20,7 +20,7 @@ app.use(
 app.use(webpackHotMiddleware(compiler));
 app.use(express.static('public'));
 
-app.get('*', (req, res, next) => {
+app.get('*', (req, res) => {
   const store = createStore();
 
   const promises = matchRoutes(Routes, req.path).map(({ route }) =>
