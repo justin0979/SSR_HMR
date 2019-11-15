@@ -1,18 +1,9 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { Provider } from 'react-redux';
-import { StaticRouter } from 'react-router-dom';
-import serialize from 'serialize-javascript';
-import App from '@client/App';
+import App from '@components/App';
 
-export default (req, store) => {
-  const content = renderToString(
-    <Provider store={store}>
-      <StaticRouter location={req.path} context={{}}>
-        <App />
-      </StaticRouter>
-    </Provider>
-  );
+export default () => {
+  const content = renderToString(<App />);
 
   return `
   <!DOCTYPE html>
@@ -25,9 +16,6 @@ export default (req, store) => {
     </head>
     <body>
       <div id='root'>${content}</div>
-      <script>
-        window.__INITIAL_STATE__ = ${serialize(store.getState())}
-      </script>
       <script src='client-bundle.js'></script>
     </body>
   </html>

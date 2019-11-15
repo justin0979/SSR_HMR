@@ -1,28 +1,28 @@
-const path = require("path");
-const MiniExtractCssPlugin = require("mini-css-extract-plugin");
-const merge = require("webpack-merge");
-const baseConfig = require("./webpack.dev-base");
-const webpack = require("webpack");
+const path = require('path');
+const MiniExtractCssPlugin = require('mini-css-extract-plugin');
+const merge = require('webpack-merge');
+const baseConfig = require('./webpack.dev-base');
+const webpack = require('webpack');
 
 module.exports = merge(baseConfig, {
-  name: "client",
-  target: "web",
-  mode: "development",
+  name: 'client',
+  target: 'web',
+  mode: 'development',
   entry: {
     client: [
-      "react-hot-loader/patch",
-      "webpack-hot-middleware/client?reload=true&name=client&timeout=2000",
-      "./src/client"
+      'react-hot-loader/patch',
+      'webpack-hot-middleware/client?reload=true&name=client&timeout=2000',
+      './src/client'
     ]
   },
   output: {
-    filename: "[name]-bundle.js",
-    path: path.resolve(__dirname, "../public"),
-    publicPath: "/"
+    filename: '[name]-bundle.js',
+    path: path.resolve(__dirname, '../public'),
+    publicPath: '/'
   },
   resolve: {
     alias: {
-      "react-dom": "@hot-loader/react-dom"
+      'react-dom': '@hot-loader/react-dom'
     }
   },
   module: {
@@ -32,18 +32,28 @@ module.exports = merge(baseConfig, {
         use: [
           {
             loader: MiniExtractCssPlugin.loader,
-            options: { hmr: process.env.NODE_ENV === "development" }
+            options: { hmr: process.env.NODE_ENV === 'development' }
           },
-          "css-loader",
-          "postcss-loader",
-          "sass-loader"
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: '[path][name].[ext]' }
+          },
+          'image-webpack-loader'
         ]
       }
     ]
   },
   plugins: [
     new MiniExtractCssPlugin({
-      filename: "style.css"
+      filename: 'style.css'
     }),
     new webpack.HotModuleReplacementPlugin()
   ]

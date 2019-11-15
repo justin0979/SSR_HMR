@@ -22,16 +22,6 @@ module.exports = {
         test: /\.jsx?$/,
         use: 'babel-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: { name: '[path][name].[ext]' }
-          },
-          'image-webpack-loader'
-        ]
       }
     ]
   },
