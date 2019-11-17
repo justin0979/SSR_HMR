@@ -17,7 +17,7 @@ App runs on port 3000.
 
 ### Tests
 
-Go to `testing` branch.
+Go to `testing` branch with `git checkout testing`, after cloning repo.
 
 `npm run test` will run and watch all current tests.
 
