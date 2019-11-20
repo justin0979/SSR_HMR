@@ -27,10 +27,4 @@ All tests are from Stephen Grider's "Advanced React and Redux: 2018 Edition" cou
 
 ### Current Issue
 
-Oddly, hours prior to JSX not updating with JS blocked in the browser,
-saves made to JSX changes were applied to both allowed and blocked JS
-in the browser. Not sure what I did differently. I checked older versions
-and had no success with only server updates. At least, JSX and CSS saved
-changes are applied to the browser when JS is allowed.
-
-I'll continue to check into how to apply server side updates on save.
+Client side saves successfully have HMR; however, any changes to the server code require that the program be terminated and then restarted again in order to have the changes executed. I've read that nodemon and webpack do not work well together, and through hours of pain, I can confirm that. I've seen, but have yet to try, `nodemon-webpack-plugin`. I'll look more into it and see if I have any success there.
