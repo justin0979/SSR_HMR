@@ -28,3 +28,14 @@ All tests are from Stephen Grider's "Advanced React and Redux: 2018 Edition" cou
 ### Current Issue
 
 Client side saves successfully have HMR; however, any changes to the server code require that the program be terminated and then restarted again in order to have the changes executed. I've read that nodemon and webpack do not work well together, and through hours of pain, I can confirm that. I've seen, but have yet to try, `nodemon-webpack-plugin`. I'll look more into it and see if I have any success there.
+
+After experimenting a while with moving `index.js` to `server.js` and adding
+
+```
+require('@babel/register')
+require('./server')
+```
+ 
+ and adding the script `nodemon --watch server server` to `package.json`, I had some success with server not crashing when JSX or server code was changed and saved. CSS changes were only applied with using `style-loader`. I attempted to use an external CSS file but could not get CSS saves to hot-reload. Also, the images were giving an error of not being able to find the module it was (in React component `HomePage.jsx`). Adding `require('./public/style.css')` to `index.js` just added errors. 
+ 
+ Browser needed manual refresh when server code was changed and saved. Overall, not the ideal dev environment I'm trying to get. For now, I'll keep what I have and just restart the server when server code is changed (which will be often with addition of database).
