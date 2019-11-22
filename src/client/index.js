@@ -3,4 +3,4 @@ import ReactDOM from 'react-dom';
 import App from '@components/App';
 import '@sass/main';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.hydrate(<App />, document.querySelector('#root'));
