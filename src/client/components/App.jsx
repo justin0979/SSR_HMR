@@ -1,15 +1,17 @@
-import { hot } from 'react-hot-loader/root';
 import React from 'react';
 
-const renderThis = () => {
-  return 'what now';
-};
+const hooks = ['Hooks', 'Are', 'Supported', 'with', 'react-hot-loader'];
+
 const App = () => {
+  const [comments] = React.useState(hooks);
+
   return (
     <div className="app">
-      <h1>App</h1>
+      {comments.map(comment => (
+        <h1 key={comment}>{comment}</h1>
+      ))}
     </div>
   );
 };
 
-export default hot(App);
+export default App;
