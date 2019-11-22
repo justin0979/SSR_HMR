@@ -39,8 +39,5 @@ const mapStateToProps = state => ({
 
 export default {
   loadData,
-  component: connect(
-    mapStateToProps,
-    { fetchUsers }
-  )(UsersListPage)
+  component: connect(mapStateToProps, { fetchUsers })(UsersListPage)
 };

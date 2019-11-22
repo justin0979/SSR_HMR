@@ -71,8 +71,5 @@ const mapStateToProps = state => ({
 });
 
 export default {
-  component: connect(
-    mapStateToProps,
-    { increment, decrement }
-  )(HomePage)
+  component: connect(mapStateToProps, { increment, decrement })(HomePage)
 };
