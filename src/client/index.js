@@ -10,7 +10,7 @@ import '@sass/main';
 
 console.log(`process.env.NODE_ENV = ${process.env.NODE_ENV}.`);
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <Provider
     store={createStore(
       reducers,
