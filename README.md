@@ -15,7 +15,13 @@ I've only tried this in Chrome.
 Runs app in development mode.
 App runs on port 3000.
 
+### Some Config
+
+If someone wants to mess around with their own absolute/relative routes, I've just implemented that using the `babel.config.js` >> `plugins` >> `module-resolver` >> `alias`. Just make any changes to the naming scheme.
+
 ### Tests
+
+(I haven't finished all of the testing courses, so this section is incomplete)
 
 Go to `testing` branch with `git checkout testing`, after cloning repo.
 
