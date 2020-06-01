@@ -26,3 +26,29 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.btn {
+  height: 3.5rem;
+  width: 20rem;
+  margin: 1rem;
+  font-weight: 700;
+  color: #555;
+  background-image: linear-gradient(
+    to left,
+    rgba(springgreen, 0.8),
+    rgba(green, 0.8)
+  );
+  border: none;
+  border-radius: 3rem;
+  outline: none;
+  transition: 0.2s all;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-0.5rem);
+  }
+
+  &:active {
+    transform: translateY(-0.2rem);
+  }
+}
