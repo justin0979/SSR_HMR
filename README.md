@@ -14,7 +14,7 @@ I've only tried this in Chrome.
 
 `git clone --branch base-setup --single-branch --depth 1 git@github.com:justin0979/SSR_HMR.git`
 
-This does not contain the following at this moment:
+This base-setup branch does not contain the following:
 
 - axios
 - react-redux
