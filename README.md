@@ -10,7 +10,21 @@ documentation from webpack-dev-middleware, webpack-hot-middleware, react-hot-loa
 
 I've only tried this in Chrome.
 
-### `npm start`
+### To use a more basic setup copy and paste in terminal:
+
+`git clone --branch base-setup --single-branch --depth 1 git@github.com:justin0979/SSR_HMR.git
+
+This does not contain the following at this moment:
+
+- axios
+- react-redux
+- react-router-config
+- react-router-dom
+- redux
+- redux-thunk
+- serialize-javascript
+
+### `npm i && npm start`
 
 Runs app in development mode.
 App runs on port 3000.

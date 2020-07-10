@@ -12,18 +12,18 @@ module.exports = merge(baseConfig, {
     client: [
       "react-hot-loader/patch",
       "webpack-hot-middleware/client?reload=true&name=client&timeout=2000",
-      "./src/client"
-    ]
+      "./src/client",
+    ],
   },
   output: {
     filename: "[name]-bundle.js",
     path: path.resolve(__dirname, "../public"),
-    publicPath: "/"
+    publicPath: "/",
   },
   resolve: {
     alias: {
-      "react-dom": "@hot-loader/react-dom"
-    }
+      "react-dom": "@hot-loader/react-dom",
+    },
   },
   module: {
     rules: [
@@ -32,19 +32,26 @@ module.exports = merge(baseConfig, {
         use: [
           {
             loader: MiniExtractCssPlugin.loader,
-            options: { hmr: process.env.NODE_ENV === "development" }
+            options: { hmr: process.env.NODE_ENV === "development" },
           },
           "css-loader",
-          "postcss-loader",
-          "sass-loader"
-        ]
-      }
-    ]
+          {
+            loader: "postcss-loader",
+            options: {
+              config: {
+                path: "./config/postcss.config.js",
+              },
+            },
+          },
+          "sass-loader",
+        ],
+      },
+    ],
   },
   plugins: [
     new MiniExtractCssPlugin({
-      filename: "style.css"
+      filename: "style.css",
     }),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 });
