@@ -12,7 +12,7 @@ I've only tried this in Chrome.
 
 ### To use a more basic setup copy and paste in terminal:
 
-`git clone --branch base-setup --single-branch --depth 1 git@github.com:justin0979/SSR_HMR.git
+`git clone --branch base-setup --single-branch --depth 1 git@github.com:justin0979/SSR_HMR.git`
 
 This does not contain the following at this moment:
 
