@@ -6,7 +6,7 @@ applied when javascript is turned off in the browser).
 
 The SSR code is based on Stephen Grider's lectures about SSR with changes made to allow for HMR. After reading several
 blogs, watching numerous lectures repeatedly, and getting help from Viktor Pyskunov, I was able to finally comprehend the
-documentation from webpack-dev-middleware, webpack-hot-middleware, react-hot-loader and serveral other needed doc's.
+documentation from webpack-dev-middleware, webpack-hot-middleware, react-hot-loader and several other needed doc's. The HMR code is in `/server/index.js` and looks mostly like what the doc's showed in 2019.
 
 I've only tried this in Chrome.
 
@@ -18,6 +18,9 @@ App runs on port 3000.
 ### Some Config
 
 If someone wants to mess around with their own absolute/relative routes, I've just implemented that using the `babel.config.js` >> `plugins` >> `module-resolver` >> `alias`. Just make any changes to the naming scheme.
+I read that using `@` is common practice (i.e. `@components`); but, I've left off the `@` and haven't run into any naming issues (if using webpack.config.js for my absolute paths, I've used the resolve.modules and all direct children of `src` are used). With webpack, to get to `/src/components/Home.jsx` I'd just use something like `import Home from 'components/Home' with no issues.
+
+I just put some sass in `/src/client/sass/main.scss`. It's really disorganized. Adding Bulma or materialize-css is easy with either npm or cdn.
 
 ### Tests
 
@@ -41,7 +44,7 @@ After experimenting a while with moving `index.js` to `server.js` and adding
 require('@babel/register')
 require('./server')
 ```
- 
- and adding the script `nodemon --watch server server` to `package.json`, I had some success with server not crashing when JSX or server code was changed and saved. CSS changes were only applied with using `style-loader`. I attempted to use an external CSS file but could not get CSS saves to hot-reload. Also, the images were giving an error of not being able to find the module it was (in React component `HomePage.jsx`). Adding `require('./public/style.css')` to `index.js` just added errors. 
- 
- Browser needed manual refresh when server code was changed and saved. Overall, not the ideal dev environment I'm trying to get. For now, I'll keep what I have and just restart the server when server code is changed (which will be often with addition of database).
+
+and adding the script `nodemon --watch server server` to `package.json`, I had some success with server not crashing when JSX or server code was changed and saved. CSS changes were only applied with using `style-loader`. I attempted to use an external CSS file but could not get CSS saves to hot-reload. Also, the images were giving an error of not being able to find the module it was (in React component `HomePage.jsx`). Adding `require('./public/style.css')` to `index.js` just added errors.
+
+Browser needed manual refresh when server code was changed and saved. Overall, not the ideal dev environment I'm trying to get. For now, I'll keep what I have and just restart the server when server code is changed (which will be often with addition of database).
