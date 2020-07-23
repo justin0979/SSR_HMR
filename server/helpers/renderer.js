@@ -1,9 +1,9 @@
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import { Provider } from 'react-redux';
-import { StaticRouter } from 'react-router-dom';
-import serialize from 'serialize-javascript';
-import App from '@client/App';
+import React from "react";
+import { renderToString } from "react-dom/server";
+import { Provider } from "react-redux";
+import { StaticRouter } from "react-router-dom";
+import serialize from "serialize-javascript";
+import App from "&client/App";
 
 export default (req, store) => {
   const content = renderToString(

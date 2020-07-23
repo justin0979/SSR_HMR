@@ -32,7 +32,7 @@ App runs on port 3000.
 ### Some Config
 
 If someone wants to mess around with their own absolute/relative routes, I've just implemented that using the `babel.config.js` >> `plugins` >> `module-resolver` >> `alias`. Just make any changes to the naming scheme.
-I read that using `@` is common practice (i.e. `@components`); but, I've left off the `@` and haven't run into any naming issues (if using webpack.config.js for my absolute paths, I've used the resolve.modules and all direct children of `src` are used). With webpack, to get to `/src/components/Home.jsx` I'd just use something like `import Home from 'components/Home' with no issues.
+I read that using anything other than `@` is common practice (i.e. `#components`, or using `%`, `&`, etc); but, I've left off the `#` and haven't run into any naming issues (if using webpack.config.js for my absolute paths, I've used the resolve.modules and all direct children of `src` are used). I've started using `#` to name directories in root and `&` for sub-directories of `src` or `server`; however, I may not have gone through all of the branches to update this route naming scheme. With webpack, to get to `/src/components/Home.jsx` I'd just use something like `import Home from 'components/Home' with no issues.
 
 I just put some sass in `/src/client/sass/main.scss`. It's really disorganized. Adding Bulma or materialize-css is easy with either npm or cdn.
 
