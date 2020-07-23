@@ -1,23 +1,23 @@
-import express from 'express';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpack from 'webpack';
-import renderer from '@helpers/renderer';
-import config from '@config/webpack.dev-client';
+import express from "express";
+import webpackDevMiddleware from "webpack-dev-middleware";
+import webpackHotMiddleware from "webpack-hot-middleware";
+import webpack from "webpack";
+import renderer from "&helpers/renderer";
+import config from "&config/webpack.dev-client";
 
 const app = express();
 const compiler = webpack(config);
 
 app.use(
   webpackDevMiddleware(compiler, {
-    publicPath: config.output.publicPath
+    publicPath: config.output.publicPath,
   })
 );
 app.use(webpackHotMiddleware(compiler));
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-app.get('*', (req, res) => {
+app.get("*", (req, res) => {
   res.send(renderer());
 });
 

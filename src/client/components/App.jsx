@@ -1,5 +1,5 @@
 import React, { useState, Suspense, lazy } from "react";
-const Other = lazy(() => import("./Other"));
+const Other = lazy(() => import("&components/Other"));
 
 const App = () => {
   const hooks = [
