@@ -12,7 +12,9 @@ I've only tried this in Chrome.
 
 ### To use a more basic setup copy and paste in terminal:
 
-`git clone --branch base-setup --single-branch --depth 1 git@github.com:justin0979/SSR_HMR.git`
+```sh
+git clone --branch base-setup --single-branch --depth 1 git@github.com:justin0979/SSR_HMR.git
+```
 
 This base-setup branch does not contain the following:
 
@@ -54,7 +56,7 @@ Client side saves successfully have HMR; however, any changes to the server code
 
 After experimenting a while with moving `index.js` to `server.js` and adding
 
-```
+```javascript
 require('@babel/register')
 require('./server')
 ```
