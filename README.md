@@ -1,3 +1,9 @@
+# OUT OF DATE
+
+Running `npm i` will hang on one of the outdated npm packages. This repo needs to
+have packages updated. On a few unsuccessful attempts, npm packages usually conflict
+and package installs either hang or fail.
+
 ## One setup for a React Server-Side-Rendering dev environment
 
 Ever since learning about SSR, I've been wanting to have my saves automatically applied. I found a lot of outdated material
@@ -57,8 +63,8 @@ Client side saves successfully have HMR; however, any changes to the server code
 After experimenting a while with moving `index.js` to `server.js` and adding
 
 ```javascript
-require('@babel/register')
-require('./server')
+require("@babel/register");
+require("./server");
 ```
 
 and adding the script `nodemon --watch server server` to `package.json`, I had some success with server not crashing when JSX or server code was changed and saved. CSS changes were only applied with using `style-loader`. I attempted to use an external CSS file but could not get CSS saves to hot-reload. Also, the images were giving an error of not being able to find the module it was (in React component `HomePage.jsx`). Adding `require('./public/style.css')` to `index.js` just added errors.
